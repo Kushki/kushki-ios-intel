@@ -1,0 +1,6 @@
+framework module kushki_ios_intel {
+  umbrella header "kushki-ios-intel-umbrella.h"
+
+  export *
+  module * { export * }
+}

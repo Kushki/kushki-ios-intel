@@ -1,0 +1,42 @@
+PODS:
+  - Kushki (2.4.2):
+    - Sift
+  - OHHTTPStubs (9.1.0):
+    - OHHTTPStubs/Default (= 9.1.0)
+  - OHHTTPStubs/Core (9.1.0)
+  - OHHTTPStubs/Default (9.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.1.0)
+  - OHHTTPStubs/Swift (9.1.0):
+    - OHHTTPStubs/Default
+  - Sift (2.1.1)
+
+DEPENDENCIES:
+  - Kushki (from `../`)
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
+
+SPEC REPOS:
+  trunk:
+    - OHHTTPStubs
+    - Sift
+
+EXTERNAL SOURCES:
+  Kushki:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Kushki: 1d7486598c5239790898cc3c1b3220558d8f04e1
+  OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
+  Sift: 8cd26419e0a9b0d94bd733b296353b68c44192aa
+
+PODFILE CHECKSUM: de9a1cde032572cb387b4f033da5b28fa72b7c06
+
+COCOAPODS: 1.11.3

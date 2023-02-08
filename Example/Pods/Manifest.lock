@@ -1,0 +1,42 @@
+PODS:
+  - kushki-ios-intel (2.4.2):
+    - Sift
+  - OHHTTPStubs (9.1.0):
+    - OHHTTPStubs/Default (= 9.1.0)
+  - OHHTTPStubs/Core (9.1.0)
+  - OHHTTPStubs/Default (9.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.1.0)
+  - OHHTTPStubs/Swift (9.1.0):
+    - OHHTTPStubs/Default
+  - Sift (2.1.1)
+
+DEPENDENCIES:
+  - kushki-ios-intel (from `../`)
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
+
+SPEC REPOS:
+  trunk:
+    - OHHTTPStubs
+    - Sift
+
+EXTERNAL SOURCES:
+  kushki-ios-intel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  kushki-ios-intel: 77a29218126d996f5b2d3f64de728ed3d94ad29b
+  OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
+  Sift: 8cd26419e0a9b0d94bd733b296353b68c44192aa
+
+PODFILE CHECKSUM: 3bbb9d99973f27f41d129faf2c4a28fcc4a00022
+
+COCOAPODS: 1.11.3
