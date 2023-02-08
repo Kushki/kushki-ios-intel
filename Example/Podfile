@@ -1,0 +1,6 @@
+use_frameworks!
+target 'kushki-ios-intel_Tests' do
+  pod 'kushki-ios-intel', :path => '../'
+  
+  
+end
