@@ -1,29 +1,19 @@
-# kushki-ios-intel
+# Kushki-ios
 
-[![CI Status](https://img.shields.io/travis/Shavis0n/kushki-ios-intel.svg?style=flat)](https://travis-ci.org/Shavis0n/kushki-ios-intel)
-[![Version](https://img.shields.io/cocoapods/v/kushki-ios-intel.svg?style=flat)](https://cocoapods.org/pods/kushki-ios-intel)
-[![License](https://img.shields.io/cocoapods/l/kushki-ios-intel.svg?style=flat)](https://cocoapods.org/pods/kushki-ios-intel)
-[![Platform](https://img.shields.io/cocoapods/p/kushki-ios-intel.svg?style=flat)](https://cocoapods.org/pods/kushki-ios-intel)
+Librería iOS para Kushki
 
-## Example
+[![Build Status](https://travis-ci.org/Kushki/kushki-ios.svg?branch=master)](https://travis-ci.org/Kushki/kushki-ios)
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Requisitos
 
-## Requirements
+Instalar `cocoapods` corriendo
 
-## Installation
-
-kushki-ios-intel is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'kushki-ios-intel'
+```bash
+gem install cocoapods:1.1.0.rc.3
 ```
 
-## Author
+## Créditos
 
-Shavis0n, javier@kushkipagos.com
-
-## License
-
-kushki-ios-intel is available under the MIT license. See the LICENSE file for more info.
+* Thanh Ba Nguyen por su
+[RSAUtils.swift](https://github.com/btnguyen2k/swiftutils/blob/master/SwiftUtils/RSAUtils.swift)
+(Licencia MIT)
