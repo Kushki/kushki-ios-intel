@@ -788,4 +788,3 @@ class KushkiClient: CardinalValidationDelegate {
         return requestDictionary
     }
 }
-

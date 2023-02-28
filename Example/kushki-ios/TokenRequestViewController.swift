@@ -130,4 +130,3 @@ class TokenRequestViewController: UIViewController, WKNavigationDelegate {
     }
 }
 
-

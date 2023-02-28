@@ -28,4 +28,3 @@ public struct TokenRequest3DS {
         self.sessionId = sessionId
     }
 }
-

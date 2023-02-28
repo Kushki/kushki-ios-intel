@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double kushki_ios_intelVersionNumber;
-FOUNDATION_EXPORT const unsigned char kushki_ios_intelVersionString[];
+FOUNDATION_EXPORT double KushkiVersionNumber;
+FOUNDATION_EXPORT const unsigned char KushkiVersionString[];
 
