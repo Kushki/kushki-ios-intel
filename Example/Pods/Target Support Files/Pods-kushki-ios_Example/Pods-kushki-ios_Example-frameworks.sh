@@ -176,14 +176,14 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${PODS_ROOT}/../../Kushki/Frameworks/CardinalMobile.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kushki/Kushki.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Sift/Sift.framework"
-  install_framework "${PODS_ROOT}/../../kushki-ios-intel/Frameworks/CardinalMobile.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/kushki-ios-intel/kushki_ios_intel.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${PODS_ROOT}/../../Kushki/Frameworks/CardinalMobile.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kushki/Kushki.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Sift/Sift.framework"
-  install_framework "${PODS_ROOT}/../../kushki-ios-intel/Frameworks/CardinalMobile.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/kushki-ios-intel/kushki_ios_intel.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
