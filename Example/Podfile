@@ -4,7 +4,7 @@ use_frameworks!
 target 'kushki-ios_Example' do
   # Uncomment this line and comment the next one in order to use the library from CocoaPods instead
   # pod 'Kushki'
-  pod 'Kushki', :path => '../'
+  pod 'kushki-ios-intel', :path => '../'
   target 'kushki-ios_Tests' do
     inherit! :search_paths
     pod 'OHHTTPStubs'
