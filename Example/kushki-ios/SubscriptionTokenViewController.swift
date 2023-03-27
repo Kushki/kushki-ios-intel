@@ -67,7 +67,7 @@ class SubscriptionTokenViewController: UIViewController {
             let message = transaction.isSuccessful() ?
                 transaction.token : transaction.code + ": " + transaction.message
             
-            if(transaction.secureService!=="KushkiOTP"){
+            if(transaction.secureService != nil && transaction.secureService!=="KushkiOTP"){
                 self.otpField.isHidden = false
                 self.validationButton.isHidden = false
             }
@@ -77,10 +77,12 @@ class SubscriptionTokenViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Ok", style: .default))
                 self.present(alert, animated: true)
             })
-            self.ResponseView.text = "Token subscription response:\n" + message+"\n"+"SecureId:\n"+transaction.secureId!+"\n"+"Secure Service:\n"+transaction.secureService!
             
-            self.serviceSecure = transaction.secureService!
-            self.idSecure = transaction.secureId!
+            if(transaction.secureId != nil && transaction.secureService != nil ){
+                                       
+                self.serviceSecure = transaction.secureService!
+                self.idSecure = transaction.secureId!
+            }
             
             }
         
