@@ -370,12 +370,24 @@ class KushkiClient: CardinalValidationDelegate {
     private func showHttpResponse(withMerchantId publicMerchantId: String, endpoint: String, requestBody: String, withCompletion completion: @escaping (String) -> ()) {
         
         let url = URL(string: self.environment.rawValue + endpoint)!
+        
         var request = URLRequest(url: url)
+        
         request.httpMethod = "POST"
+        
         request.httpBody = requestBody.data(using: String.Encoding.utf8)
+        
         request.addValue("application/json; charset=UTF-8",
                          forHTTPHeaderField: "Content-Type")
+        
         request.addValue(publicMerchantId, forHTTPHeaderField: "public-merchant-id")
+        
+        let kushkiInfoMetadata  = self.createHeaderKushkiInfo(endpoint: endpoint)
+                
+        if kushkiInfoMetadata != nil{
+            request.addValue(kushkiInfoMetadata!, forHTTPHeaderField: "X-Amz-Meta-Kushki-Info")
+        }
+        
         let task = URLSession.shared.dataTask (with: request) { data, response, error in
             if let theError = error {
                 print(theError.localizedDescription)
@@ -385,6 +397,21 @@ class KushkiClient: CardinalValidationDelegate {
             completion(responseBody)
         }
         task.resume()
+    }
+    
+    private func createHeaderKushkiInfo(endpoint: String) -> String?{
+        if(endpoint == EndPoint.token.rawValue
+           || endpoint == EndPoint.subscriptionToken.rawValue
+           || endpoint == EndPoint.transferToken.rawValue
+           || endpoint == EndPoint.transferSubcriptionToken.rawValue
+           || endpoint == EndPoint.cashToken.rawValue
+           || endpoint == EndPoint.cardAsyncToken.rawValue
+           || endpoint == EndPoint.subscriptionCardAsyncToken.rawValue){
+            
+            return  KushkiInfo().toBase64()
+        }else {
+            return nil
+        }
     }
     
     private func parseResponse(jsonResponse: String) -> Transaction {

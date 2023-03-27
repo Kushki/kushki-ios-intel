@@ -7,3 +7,8 @@ public enum KushkiEnvironment: String {
     case testing_ci = "https://api-ci.kushkipagos.com"
     case testing_qa = "https://api-qa.kushkipagos.com"
 }
+
+
+public enum PLATFORMS : String {
+    case IOS = "KP004"
+}

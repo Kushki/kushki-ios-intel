@@ -64,7 +64,6 @@ class TransferTokenViewController: UIViewController, UIPickerViewDelegate, UIPic
                 alert.addAction(UIAlertAction(title: "Ok", style: .default))
                 self.present(alert, animated: true)
             })
-            self.ResponseView.text = "Response transfer token: \n\n" + message
         }
     }
 }
