@@ -259,7 +259,6 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				8EBEF13F2FB1428517D6E801 /* [CP] Embed Pods Frameworks */,
 				EFCDE42427C074FB0054C25C /* Embed Frameworks */,
-				0CA549A890B06D99ECE20817 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,7 +278,6 @@
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				23109A9A62935303371592FD /* [CP] Embed Pods Frameworks */,
-				AF45E86859644B6FB26E5885 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,25 +360,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0CA549A890B06D99ECE20817 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		23109A9A62935303371592FD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,7 +375,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kushki-ios_Tests/Pods-kushki-ios_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kushki-ios_Tests/Pods-kushki-ios_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3C83D57491B83F4BC8B6365E /* [CP] Check Pods Manifest.lock */ = {
@@ -418,7 +397,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8EBEF13F2FB1428517D6E801 /* [CP] Embed Pods Frameworks */ = {
@@ -428,38 +407,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example-frameworks.sh",
-				"${PODS_ROOT}/../../Kushki/Frameworks/CardinalMobile.framework",
-				"${BUILT_PRODUCTS_DIR}/Kushki/Kushki.framework",
 				"${BUILT_PRODUCTS_DIR}/Sift/Sift.framework",
+				"${PODS_ROOT}/../../kushki-ios-intel/Frameworks/CardinalMobile.framework",
+				"${BUILT_PRODUCTS_DIR}/kushki-ios-intel/kushki_ios_intel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardinalMobile.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kushki.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardinalMobile.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/kushki_ios_intel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AF45E86859644B6FB26E5885 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kushki-ios_Tests/Pods-kushki-ios_Tests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C55FCF72FAC64EF1CBD47AEE /* [CP] Check Pods Manifest.lock */ = {
@@ -481,7 +441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -668,6 +628,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2633DEB327DBCE77C71823A3 /* Pods-kushki-ios_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "kushki-ios_Example.entitlements";
@@ -692,6 +653,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BFA99897193F3500082CDA0 /* Pods-kushki-ios_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "kushki-ios_Example.entitlements";
@@ -716,6 +678,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6682DB8730FDC44D317526EC /* Pods-kushki-ios_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = BDY7NP86NV;
@@ -742,7 +705,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CE9734B89FC1D9E54015281 /* Pods-kushki-ios_Tests.release.xcconfig */;
+			baseConfigurationReference = CF60D57898B6A7C968498700 /* Pods-kushki-ios_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = BDY7NP86NV;

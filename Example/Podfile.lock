@@ -23,6 +23,11 @@ DEPENDENCIES:
   - OHHTTPStubs
   - OHHTTPStubs/Swift
 
+SPEC REPOS:
+  trunk:
+    - OHHTTPStubs
+    - Sift
+
 EXTERNAL SOURCES:
   kushki-ios-intel:
     :path: "../"
@@ -34,4 +39,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 3bbb9d99973f27f41d129faf2c4a28fcc4a00022
 
-COCOAPODS: 1.1.0.rc.3
+COCOAPODS: 1.11.3
