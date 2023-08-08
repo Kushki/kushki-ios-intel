@@ -12,6 +12,7 @@
 #import "SiftQueueConfig.h"
 #import "SiftUploader.h"
 #import "SiftUtils.h"
+#import "TaskManager.h"
 
 #import "Sift.h"
 #import "Sift+Private.h"
@@ -37,6 +38,7 @@ static const SiftQueueConfig SFDefaultEventQueueConfig = {
 
     NSMutableDictionary *_eventQueues;
     SiftUploader *_uploader;
+    TaskManager *_taskManager;
 
     // Extra collection mechanisms.
     SiftIosAppStateCollector *_iosAppStateCollector;
@@ -55,7 +57,7 @@ static const SiftQueueConfig SFDefaultEventQueueConfig = {
 - (instancetype)initWithRootDirPath:(NSString *)rootDirPath {
     self = [super init];
     if (self) {
-        _sdkVersion = @"v2.1.0";
+        _sdkVersion = @"v2.1.5";
 
         _rootDirPath = rootDirPath;
 
@@ -70,6 +72,7 @@ static const SiftQueueConfig SFDefaultEventQueueConfig = {
             self = nil;
             return nil;
         }
+        _taskManager = [[TaskManager alloc] init];
 
         // Create the default event queue.
         if (![self addEventQueue:SFDefaultEventQueueIdentifier config:SFDefaultEventQueueConfig]) {
@@ -100,9 +103,9 @@ static const SiftQueueConfig SFDefaultEventQueueConfig = {
 
 - (void)applicationDidEnterBackground:(NSNotification *)notification {
     SF_DEBUG(@"Enter background");
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^{
+    [_taskManager submitWithTask:^{
         [self archive];
-    });
+    } queue:dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)];
 }
 
 - (BOOL)hasEventQueue:(NSString *)identifier {
@@ -233,32 +236,6 @@ static const SiftQueueConfig SFDefaultEventQueueConfig = {
 }
 
 
-- (BOOL)allowUsingMotionSensors {
-    return [_iosAppStateCollector allowUsingMotionSensors];
-}
-
-- (void)setAllowUsingMotionSensors:(BOOL)allowUsingMotionSensors {
-    [_iosAppStateCollector setAllowUsingMotionSensors:allowUsingMotionSensors];
-}
-
-
-- (void)updateDeviceMotion:(CMDeviceMotion *)data {
-    [_iosAppStateCollector updateDeviceMotion:data];
-}
-
-- (void)updateAccelerometerData:(CMAccelerometerData *)data {
-    [_iosAppStateCollector updateAccelerometerData:data];
-}
-
-- (void)updateGyroData:(CMGyroData *)data {
-    [_iosAppStateCollector updateGyroData:data];
-}
-
-- (void)updateMagnetometerData:(CMMagnetometerData *)data {
-    [_iosAppStateCollector updateMagnetometerData:data];
-}
-
-
 - (BOOL)disallowCollectingLocationData {
     return [_iosAppStateCollector disallowCollectingLocationData];
 }
@@ -317,44 +294,24 @@ static NSString * const SF_UPLOADER = @"uploader";
         [archive setObject:_userId forKey:SF_SIFT_USER_ID];
     }
     NSError *error;
-    #if TARGET_OS_MACCATALYST
-        if ([self archivePathForKeys] != nil) {
-            NSData* data = [NSKeyedArchiver archivedDataWithRootObject: archive requiringSecureCoding:NO error:&error];
-            [data writeToFile:[self archivePathForKeys] options:NSDataWritingAtomic error:&error];
-            SF_DEBUG(@"Write returned error: %@", [error localizedDescription]);
-        }
-    #else
-        if (@available(iOS 11.0, *)) {
-            if ([self archivePathForKeys] != nil) {
-                NSData* data = [NSKeyedArchiver archivedDataWithRootObject: archive requiringSecureCoding:NO error:&error];
-                [data writeToFile:[self archivePathForKeys] options:NSDataWritingAtomic error:&error];
-                SF_DEBUG(@"Write returned error: %@", [error localizedDescription]);
-            }
-        } else {
-            [NSKeyedArchiver archiveRootObject:archive toFile:[self archivePathForKeys]];
-        }
-    #endif
+
+    if ([self archivePathForKeys] != nil) {
+        NSData* data = [NSKeyedArchiver archivedDataWithRootObject: archive requiringSecureCoding:NO error:&error];
+        [data writeToFile:[self archivePathForKeys] options:NSDataWritingAtomic error:&error];
+        SF_DEBUG(@"Write returned error: %@", [error localizedDescription]);
+    }
+
 }
 
 - (void)unarchiveKeys {
     NSDictionary *archive;
     NSData *newData = [NSData dataWithContentsOfFile:[self archivePathForKeys]];
     NSError *error;
-    #if TARGET_OS_MACCATALYST
-        NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
-        unarchiver.requiresSecureCoding = NO;
-        archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
-        SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
-    #else
-        if (@available(iOS 11.0, *)) {
-            NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
-            unarchiver.requiresSecureCoding = NO;
-            archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
-            SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
-        } else {
-            archive = [NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePathForKeys]];
-        }
-    #endif
+
+    NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
+    unarchiver.requiresSecureCoding = NO;
+    archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
+    SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
 
     if (archive) {
         _accountId = [archive objectForKey:SF_SIFT_ACCOUNT_ID];

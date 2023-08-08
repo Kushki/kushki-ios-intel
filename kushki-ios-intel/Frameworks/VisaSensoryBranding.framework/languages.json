@@ -1,0 +1,563 @@
+{
+    "en": {
+        "name": "English",
+        "code": "en",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Approved",
+            "success": "Success",
+            "complete": "Complete"
+        }
+    },
+    "ar": {
+        "name": "Arabic",
+        "code": "ar",
+        "fontFamily": "noto_sans_arabic",
+        "fontNames": "NotoSansArabic-Medium",
+        "data": {
+            "approve": "مُعتمد",
+            "success": "نجاح",
+            "complete": "إتمام"
+        }
+    },
+    "az": {
+        "name": "Azeri",
+        "code": "az",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Təsdiqlənib",
+            "success": "Uğurlu",
+            "complete": "Tamamla"
+        }
+    },
+    "id": {
+        "name": "Bahasa Indonesia",
+        "code": "id",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Disetujui",
+            "success": "Berhasil",
+            "complete": "Selesai"
+        }
+    },
+    "bs": {
+        "name": "Bosnian",
+        "code": "bs",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Odobreno",
+            "success": "Uspješno",
+            "complete": "Završeno"
+        }
+    },
+    "bg": {
+        "name": "Bulgarian",
+        "code": "bg",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Одобрено",
+            "success": "Успех",
+            "complete": "Готово"
+        }
+    },
+    "en_ca": {
+        "name": "Canadian English",
+        "code": "en_ca",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Approved",
+            "success": "Success",
+            "complete": "Complete"
+        }
+    },
+    "fr_ca": {
+        "name": "Canadian French",
+        "code": "fr_ca",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Approuvé",
+            "success": "Succès",
+            "complete": "Terminé"
+        }
+    },
+    "hr": {
+        "name": "Croatian",
+        "code": "hr",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Odobreno",
+            "success": "Uspješno",
+            "complete": "Dovršeno"
+        }
+    },
+    "cs": {
+        "name": "Czech",
+        "code": "cs",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Schváleno",
+            "success": "Úspěch",
+            "complete": "Dokončeno"
+        }
+    },
+    "da": {
+        "name": "Danish",
+        "code": "da",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Godkendt",
+            "success": "Success",
+            "complete": "Komplet"
+        }
+    },
+    "nl": {
+        "name": "Dutch",
+        "code": "nl",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Goedgekeurd",
+            "success": "Succes",
+            "complete": "Voltooid"
+        }
+    },
+    "fi": {
+        "name": "Finnish",
+        "code": "fi",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Hyväksytty",
+            "success": "Onnistui",
+            "complete": "Täytä"
+        }
+    },
+    "fr": {
+        "name": "French",
+        "code": "fr",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Approuvé",
+            "success": "Validé",
+            "complete": "Finaliser"
+        }
+    },
+    "ka": {
+        "name": "Georgian",
+        "code": "ka",
+        "fontFamily": "noto_sans_georgian",
+        "fontNames": "NotoSansGeorgian-Medium",
+        "data": {
+            "approve": "დამტკიცდა",
+            "success": "წარმატება",
+            "complete": "შესრულებული"
+        }
+    },
+    "de": {
+        "name": "German",
+        "code": "de",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Autorisiert",
+            "success": "Erfoig",
+            "complete": "Vollständig"
+        }
+    },
+    "el": {
+        "name": "Greek",
+        "code": "el",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Εγκρίθηκε",
+            "success": "Επιτυχία",
+            "complete": "Ολοκλήρωση"
+        }
+    },
+    "he": {
+        "name": "Hebrew",
+        "code": "he",
+        "fontFamily": "noto_sans_hebrew",
+        "fontNames": "NotoSansHebrew-Medium",
+        "data": {
+            "approve": "אושר",
+            "success": "בוצע בהצלחה",
+            "complete": "הושלם"
+        }
+    },
+    "hu": {
+        "name": "Hungarian",
+        "code": "hu",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Jóváhagyva",
+            "success": "Sikeres",
+            "complete": "Kész"
+        }
+    },
+    "is": {
+        "name": "Icelandic",
+        "code": "is",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Samþykkt",
+            "success": "Heppnaðist",
+            "complete": "Lokið"
+        }
+    },
+    "it": {
+        "name": "Italian",
+        "code": "it",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Approvato",
+            "success": "Op. riuscita",
+            "complete": "Completato"
+        }
+    },
+    "lv": {
+        "name": "Latvian",
+        "code": "lv",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Apstiprināts",
+            "success": "Veiksmīgi",
+            "complete": "Pabeigts"
+        }
+    },
+    "lt": {
+        "name": "Lithuanian",
+        "code": "lt",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Patvirtinta",
+            "success": "Pavyko",
+            "complete": "Užbaigta"
+        }
+    },
+    "ja": {
+        "name": "Japanese",
+        "code": "ja",
+        "fontFamily": "noto_sans_japanese",
+        "fontNames": "NotoSansJP-Medium",
+        "data": {
+            "approve": "承認しました",
+            "success": "完了しました",
+            "complete": "完了しました"
+        }
+    },
+    "kk": {
+        "name": "Kazakh",
+        "code": "kk",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Бекітілген",
+            "success": "Сәтті",
+            "complete": "Аяқталған"
+        }
+    },
+    "km": {
+        "name": "Khmer",
+        "code": "km",
+        "fontFamily": "noto_sans_khmer",
+        "fontNames": "NotoSansKhmer-Medium",
+        "data": {
+            "approve": "បាន​អនុម័ត",
+            "success": "ដោយជោគជ័យ",
+            "complete": "បានបញ្ចប់"
+        }
+    },
+    "rw": {
+        "name": "Kinyarwanda",
+        "code": "rw",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Byemejwe",
+            "success": "Byakunze",
+            "complete": "Byarangiye"
+        }
+    },
+    "ko": {
+        "name": "Korean",
+        "code": "ko",
+        "fontFamily": "noto_sans_korean",
+        "fontNames": "NotoSansKR-Medium",
+        "data": {
+            "approve": "승인됨",
+            "success": "성공",
+            "complete": "완료"
+        }
+    },
+    "mn": {
+        "name": "Mongolian",
+        "code": "mn",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Баталсан",
+            "success": "Амжилттай",
+            "complete": "Дууссан"
+        }
+    },
+    "no": {
+        "name": "Norwegian",
+        "code": "no",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Godkjent",
+            "success": "Vellykket",
+            "complete": "Fullført"
+        }
+    },
+    "pl": {
+        "name": "Polish",
+        "code": "pl",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Zatwierdzone",
+            "success": "Udało się",
+            "complete": "Zakończone"
+        }
+    },
+    "pt_br": {
+        "name": "Portuguese (Brazilian)",
+        "code": "pt_br",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Aprovado",
+            "success": "Sucesso",
+            "complete": "Concluído"
+        }
+    },
+    "pt": {
+        "name": "Portuguese (Regular)",
+        "code": "pt",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Aprovado",
+            "success": "Bem sucedido",
+            "complete": "Concluído"
+        }
+    },
+    "ro": {
+        "name": "Romanian",
+        "code": "ro",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Aprobat",
+            "success": "Succes",
+            "complete": "Finalizat"
+        }
+    },
+    "ru": {
+        "name": "Russian",
+        "code": "ru",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Одобрено",
+            "success": "Успешно",
+            "complete": "Готово"
+        }
+    },
+    "sr": {
+        "name": "Serbian",
+        "code": "sr",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Odobreno",
+            "success": "Uspešno",
+            "complete": "Završi"
+        }
+    },
+    "zh_cn": {
+        "name": "Simplified Chinese",
+        "code": "zh_cn",
+        "fontFamily": "noto_sans_simplified_chinese",
+        "fontNames": "NotoSansSC-Medium",
+        "data": {
+            "approve": "已批准",
+            "success": "成功",
+            "complete": "完成"
+        }
+    },
+    "sk": {
+        "name": "Slovakian",
+        "code": "sk",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Schválené",
+            "success": "Úspech",
+            "complete": "Dokončiť"
+        }
+    },
+    "sl": {
+        "name": "Slovenian",
+        "code": "sl",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Odobreno",
+            "success": "Uspelo vam je",
+            "complete": "Končano"
+        }
+    },
+    "es_ar": {
+        "name": "Spanish (AR)",
+        "code": "es_ar",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Aprobado",
+            "success": "Éxito",
+            "complete": "Completo"
+        }
+    },
+    "es_mx": {
+        "name": "Spanish (MX)",
+        "code": "es_mx",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Aprobado",
+            "success": "Exitoso",
+            "complete": "Completado"
+        }
+    },
+    "es_la": {
+        "name": "Spanish (LA)",
+        "code": "es_la",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Aprobado",
+            "success": "Éxito",
+            "complete": "Completo"
+        }
+    },
+    "es": {
+        "name": "Spanish (ES)",
+        "code": "es",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Aprobado",
+            "success": "Hecho",
+            "complete": "Finalizado"
+        }
+    },
+    "sv": {
+        "name": "Swedish",
+        "code": "sv",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Godkänt",
+            "success": "Det lyckades",
+            "complete": "Fullständigt"
+        }
+    },
+    "th": {
+        "name": "Thai",
+        "code": "th",
+        "fontFamily": "noto_sans_thai",
+        "fontNames": "NotoSansThai-Medium",
+        "data": {
+            "approve": "อนุมัติ",
+            "success": "สำเร็จ",
+            "complete": "เสร็จสมบูรณ์"
+        }
+    },
+    "zh_hk": {
+        "name": "Traditional Chinese (HK)",
+        "code": "zh_hk",
+        "fontFamily": "noto_sans_traditional_chinese",
+        "fontNames": "NotoSansTC-Medium",
+        "data": {
+            "approve": "已批准",
+            "success": "成功",
+            "complete": "完成"
+        }
+    },
+    "zh_tw": {
+        "name": "Traditional Chinese (TW)",
+        "code": "zh_tw",
+        "fontFamily": "noto_sans_traditional_chinese",
+        "fontNames": "NotoSansTC-Medium",
+        "data": {
+            "approve": "已核准",
+            "success": "成功",
+            "complete": "完成"
+        }
+    },
+    "tr": {
+        "name": "Turkish",
+        "code": "tr",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Onaylandı",
+            "success": "Başardınız",
+            "complete": "Tamamlandı"
+        }
+    },
+    "en_gb": {
+        "name": "UK English",
+        "code": "en_gb",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Approved",
+            "success": "Success",
+            "complete": "Complete"
+        }
+    },
+    "ua": {
+        "name": "Ukrainian",
+        "code": "ua",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Схвалено",
+            "success": "Готово",
+            "complete": "Завершено"
+        }
+    },
+    "vi": {
+        "name": "Vietnamese",
+        "code": "vi",
+        "fontFamily": "visa_font",
+        "fontNames": "VisaDialectUI-Medium",
+        "data": {
+            "approve": "Đã phê duyệt",
+            "success": "Thành công",
+            "complete": "Hoàn thành"
+        }
+    }
+}

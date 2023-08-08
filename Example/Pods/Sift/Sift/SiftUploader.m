@@ -7,10 +7,12 @@
 #import "SiftDebug.h"
 #import "SiftEvent.h"
 #import "SiftEvent+Private.h"
+#import "TaskManager.h"
 
 #import "SiftUploader.h"
 
 @implementation SiftUploader {
+    TaskManager *_taskManager;
     // Use serial queue as an alternative to locking.
     dispatch_queue_t _serial;
     dispatch_source_t _source;
@@ -42,6 +44,7 @@ static const int64_t SF_CHECK_UPLOAD_LEEWAY = 5 * NSEC_PER_SEC;
 - (instancetype)initWithArchivePath:(NSString *)archivePath sift:(Sift *)sift config:(NSURLSessionConfiguration *)config backoffBase:(int64_t)backoffBase {
     self = [super init];
     if (self) {
+        _taskManager = [[TaskManager alloc] init];
         _serial = dispatch_queue_create("com.sift.SFUploader", DISPATCH_QUEUE_SERIAL);
         _archivePath = archivePath;
         _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
@@ -62,32 +65,32 @@ static const int64_t SF_CHECK_UPLOAD_LEEWAY = 5 * NSEC_PER_SEC;
 }
 
 - (void)upload:(NSArray *)events {
-    dispatch_async(_serial, ^{
+    [_taskManager submitWithTask:^{
         SF_DEBUG(@"Batch size: %lu", (unsigned long)events.count);
         [self->_batches addObject:events];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
+        [self->_taskManager submitWithTask:^{
             if (UIApplication.sharedApplication.applicationState == UIApplicationStateBackground) {
                 // Back up aggressively if we are in the background.
-                dispatch_async(self->_serial, ^{
+                [self->_taskManager submitWithTask:^{
                     [self archive];
-                });
+                } queue:self->_serial];
             }
-            dispatch_async(self->_serial, ^{
+            [self->_taskManager submitWithTask:^{
                 [self doUpload];
-            });
-        });
-    });
+            } queue:self->_serial];
+        } queue:dispatch_get_main_queue()];
+    } queue:_serial];
 }
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
-    dispatch_async(_serial, ^{
+    [self->_taskManager submitWithTask:^{
         [self->_responseBody appendData:data];
-    });
+    } queue:self->_serial];
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    dispatch_async(_serial, ^{
+    [self->_taskManager submitWithTask:^{
         NSData *responseBody = self->_responseBody;
         self->_uploadTask = nil;
         self->_responseBody = nil;
@@ -131,21 +134,23 @@ static const int64_t SF_CHECK_UPLOAD_LEEWAY = 5 * NSEC_PER_SEC;
             self->_backoff = self->_backoffBase;
             [self doUpload];
         } else {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, self->_backoff), self->_serial, ^{[self doUpload];});
+            [self->_taskManager scheduleWithTask:^{
+                [self doUpload];
+            } queue:self->_serial delay:self->_backoff];
             self->_backoff *= 2;
         }
-    });
+    } queue:self->_serial];
 }
 
 - (void)doUpload {
     // Query the applicationState on the main thread, then proceed on the serial dispatch queue
-    dispatch_async(dispatch_get_main_queue(), ^{
+    [self->_taskManager submitWithTask:^{
         if (UIApplication.sharedApplication.applicationState == UIApplicationStateBackground) {
             SF_DEBUG(@"App is in background");
             return;
         }
         
-        dispatch_async(self->_serial, ^{
+        [self->_taskManager submitWithTask:^{
             if (self->_uploadTask) {
                 SF_DEBUG(@"An upload is in progress");
                 return;
@@ -190,8 +195,8 @@ static const int64_t SF_CHECK_UPLOAD_LEEWAY = 5 * NSEC_PER_SEC;
                 [self->_uploadTask resume];
                 SF_IMPORTANT(@"Upload a batch of %ld events to server", (unsigned long)[[_batches objectAtIndex:0] count]);
             }
-        });
-    });
+        } queue:self->_serial];
+    } queue:dispatch_get_main_queue()];
 }
 
 #pragma mark - NSKeyedArchiver/NSKeyedUnarchiver
@@ -200,20 +205,13 @@ static NSString * const SF_BATCHES = @"batches";
 static NSString * const SF_NUM_REJECTS = @"numRejects";
 
 - (void)archive {
-    dispatch_async(_serial, ^{
+    [self->_taskManager submitWithTask:^{
         NSDictionary *archive = @{SF_BATCHES: self->_batches, SF_NUM_REJECTS: @(self->_numRejects)};
-    #if TARGET_OS_MACCATALYST
+   
         NSData* data = [NSKeyedArchiver archivedDataWithRootObject: archive requiringSecureCoding:NO error:nil];
         [data writeToFile:self->_archivePath options:NSDataWritingAtomic error:nil];
-    #else
-        if (@available(iOS 11.0, *)) {
-            NSData* data = [NSKeyedArchiver archivedDataWithRootObject: archive requiringSecureCoding:NO error:nil];
-            [data writeToFile:self->_archivePath options:NSDataWritingAtomic error:nil];
-        } else {
-            [NSKeyedArchiver archiveRootObject:archive toFile:self->_archivePath];
-        }
-    #endif
-    });
+
+    } queue:_serial];
 }
 
 // NOTE: Unprotected access - call this from within the serial dispatch queue.
@@ -221,21 +219,12 @@ static NSString * const SF_NUM_REJECTS = @"numRejects";
     NSDictionary *archive;
     NSData *newData = [NSData dataWithContentsOfFile:_archivePath];
     NSError *error;
-    #if TARGET_OS_MACCATALYST
-        NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
-        unarchiver.requiresSecureCoding = NO;
-        archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
-        SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
-    #else
-        if (@available(iOS 11.0, *)) {
-            NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
-            unarchiver.requiresSecureCoding = NO;
-            archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
-            SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
-        } else {
-            archive = [NSKeyedUnarchiver unarchiveObjectWithFile:_archivePath];
-        }
-    #endif
+   
+    NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
+    unarchiver.requiresSecureCoding = NO;
+    archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
+    SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
+
     if (archive) {
         _batches = [NSMutableArray arrayWithArray:[archive objectForKey:SF_BATCHES]];
         _numRejects = ((NSNumber *)[archive objectForKey:SF_NUM_REJECTS]).intValue;
