@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'kushki-ios-intel'
-  s.version          = '2.5.0'
+  s.version          = '2.6.0'
   s.summary          = s.summary = 'Kushki iOS library.'
   s.description      = 'iOS library to integrate with Kushki.'
   s.homepage         = 'https://github.com/Kushki/kushki-ios-intel'
@@ -14,5 +14,4 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'kushki-ios-intel/Frameworks/CardinalMobile.framework'
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.swift_version = '5.0'
 end

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		AF3034851DAC2D62005C9F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3034831DAC2D62005C9F39 /* LaunchScreen.storyboard */; };
 		AFF155E41DAC3B1100BC21EA /* Kushki in Resources */ = {isa = PBXBuildFile; fileRef = AFF155E31DAC3B1100BC21EA /* Kushki */; };
 		AFF155E61DAC3B5000BC21EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF155E51DAC3B5000BC21EA /* ViewController.swift */; };
+		C3A59A6D2A438F7E0045E0AC /* SensoryBrandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A59A6C2A438F7E0045E0AC /* SensoryBrandingController.swift */; };
+		C3A59A6F2A43B6D80045E0AC /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A59A6E2A43B6D80045E0AC /* VisaSensoryBranding.xcframework */; };
 		E2EAB27926C2C3FC00FCEDF1 /* CardTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EAB27826C2C3FC00FCEDF1 /* CardTokenView.swift */; };
 		E2EAB27A26C2C3FC00FCEDF1 /* CardTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EAB27826C2C3FC00FCEDF1 /* CardTokenView.swift */; };
 		E4035B342328698900A2A5EC /* TokenRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4035B332328698900A2A5EC /* TokenRequestViewController.swift */; };
@@ -58,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0CE9734B89FC1D9E54015281 /* Pods-kushki-ios_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kushki-ios_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kushki-ios_Tests/Pods-kushki-ios_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		21EDE058D85655FB8F5D8F7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2633DEB327DBCE77C71823A3 /* Pods-kushki-ios_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kushki-ios_Example.debug.xcconfig"; path = "Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		51C40AA32435284E00D8239F /* SubscriptionCardAsyncController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCardAsyncController.swift; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 		AFF155E51DAC3B5000BC21EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B24457BB0F3C421531BBFD93 /* Pods_kushki_ios_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kushki_ios_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB96243B3B32048EBA3B208C /* Kushki.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Kushki.podspec; path = ../Kushki.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C3A59A6C2A438F7E0045E0AC /* SensoryBrandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoryBrandingController.swift; sourceTree = "<group>"; };
+		C3A59A6E2A43B6D80045E0AC /* VisaSensoryBranding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = VisaSensoryBranding.xcframework; sourceTree = "<group>"; };
 		CF60D57898B6A7C968498700 /* Pods-kushki-ios_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kushki-ios_Tests.release.xcconfig"; path = "Target Support Files/Pods-kushki-ios_Tests/Pods-kushki-ios_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E2EAB27826C2C3FC00FCEDF1 /* CardTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTokenView.swift; sourceTree = "<group>"; };
 		E4035B332328698900A2A5EC /* TokenRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequestViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCDE42227C074FB0054C25C /* Pods_kushki_ios_Example.framework in Frameworks */,
+				C3A59A6F2A43B6D80045E0AC /* VisaSensoryBranding.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +128,7 @@
 				9BFA99897193F3500082CDA0 /* Pods-kushki-ios_Example.release.xcconfig */,
 				6682DB8730FDC44D317526EC /* Pods-kushki-ios_Tests.debug.xcconfig */,
 				CF60D57898B6A7C968498700 /* Pods-kushki-ios_Tests.release.xcconfig */,
+				0CE9734B89FC1D9E54015281 /* Pods-kushki-ios_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				C3A59A6E2A43B6D80045E0AC /* VisaSensoryBranding.xcframework */,
 				AFF155E31DAC3B1100BC21EA /* Kushki */,
 				AF3034861DAC3030005C9F39 /* kushki-ios_Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
@@ -233,6 +241,7 @@
 				E4AF00DA234CEBD5002C3B75 /* CardAsyncTokenRequestViewController.swift */,
 				E4AF00DC234D2BDD002C3B75 /* GetCardInfoViewController.swift */,
 				51C40AA32435284E00D8239F /* SubscriptionCardAsyncController.swift */,
+				C3A59A6C2A438F7E0045E0AC /* SensoryBrandingController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -398,15 +407,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example-frameworks.sh",
-				"${PODS_ROOT}/../../Kushki/Frameworks/CardinalMobile.framework",
-				"${BUILT_PRODUCTS_DIR}/Kushki/Kushki.framework",
 				"${BUILT_PRODUCTS_DIR}/Sift/Sift.framework",
+				"${PODS_ROOT}/../../kushki-ios-intel/Frameworks/CardinalMobile.framework",
+				"${BUILT_PRODUCTS_DIR}/kushki-ios-intel/kushki_ios_intel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardinalMobile.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kushki.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardinalMobile.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/kushki_ios_intel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -446,6 +455,7 @@
 				E4035B342328698900A2A5EC /* TokenRequestViewController.swift in Sources */,
 				E4AF00DB234CEBD5002C3B75 /* CardAsyncTokenRequestViewController.swift in Sources */,
 				E40BC5E12328ADA50056B58C /* SubscriptionTokenViewController.swift in Sources */,
+				C3A59A6D2A438F7E0045E0AC /* SensoryBrandingController.swift in Sources */,
 				E43FA231232A8B1400BBF920 /* AnswersSecureValidationViewController.swift in Sources */,
 				E407F713233A80AB00340214 /* CashTokenViewController.swift in Sources */,
 				51C40AA42435284E00D8239F /* SubscriptionCardAsyncController.swift in Sources */,
@@ -609,7 +619,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -626,7 +637,10 @@
 				DEVELOPMENT_TEAM = BDY7NP86NV;
 				INFOPLIST_FILE = "kushki-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -648,7 +662,10 @@
 				DEVELOPMENT_TEAM = BDY7NP86NV;
 				INFOPLIST_FILE = "kushki-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -672,7 +689,11 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -691,7 +712,11 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;

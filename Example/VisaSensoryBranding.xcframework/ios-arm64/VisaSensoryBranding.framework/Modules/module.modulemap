@@ -1,0 +1,4 @@
+framework module VisaSensoryBranding {
+  header "VisaSensoryBranding-Swift.h"
+  requires objc
+}

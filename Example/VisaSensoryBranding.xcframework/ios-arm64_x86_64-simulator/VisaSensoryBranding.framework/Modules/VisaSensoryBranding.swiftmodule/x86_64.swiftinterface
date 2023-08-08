@@ -1,0 +1,122 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name VisaSensoryBranding
+import AVFAudio
+import AudioToolbox
+import CoreGraphics
+import Foundation
+import QuartzCore
+import Swift
+import UIKit
+import _Concurrency
+public struct LangDescriptor : Swift.Codable {
+  public struct TextOptionData : Swift.Codable {
+    public var approve: Swift.String
+    public var success: Swift.String
+    public var complete: Swift.String
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public var name: Swift.String
+  public var code: Swift.String
+  public var fontFamily: Swift.String
+  public var fontNames: Swift.String
+  public var data: VisaSensoryBranding.LangDescriptor.TextOptionData
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public class Theme {
+  public init(backgroundColor: UIKit.UIColor)
+  public func getForegroundColor() -> UIKit.UIColor
+  public func getBackgroundColor() -> UIKit.UIColor
+  @objc deinit
+}
+public typealias CompletionBlock = (Swift.Bool, Swift.Error?) -> Swift.Void
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class SensoryBranding : UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) public var isSoundEnabled: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public var isHapticFeedbackEnabled: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public var checkmarkMode: VisaSensoryBranding.CheckmarkMode {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var languageCode: Swift.String
+  @_Concurrency.MainActor(unsafe) public var checkmarkTextOption: VisaSensoryBranding.CheckmarkTextOption
+  @objc @_Concurrency.MainActor(unsafe) public var checkmarkTextOptionForObjc: VisaSensoryBranding.CheckmarkTextOptionForObjc {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var backdropColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open var backgroundColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var bounds: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var frame: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  @objc @_Concurrency.MainActor(unsafe) public func animate(completion: VisaSensoryBranding.CompletionBlock? = nil)
+  @objc deinit
+}
+extension UIKit.UIColor {
+  convenience public init(hexString: Swift.String, alpha: CoreGraphics.CGFloat = 1.0)
+  public func toHexString() -> Swift.String
+  public func image(_ size: CoreGraphics.CGSize = CGSize(width: 1, height: 1)) -> UIKit.UIImage
+  public var coreImageColor: CoreImage.CIColor {
+    get
+  }
+  public var hex: Swift.UInt {
+    get
+  }
+  public static func contrastRatio(between color1: UIKit.UIColor, and color2: UIKit.UIColor) -> CoreGraphics.CGFloat
+  public func contrastRatio(with color: UIKit.UIColor) -> CoreGraphics.CGFloat
+  public func luminance() -> CoreGraphics.CGFloat
+}
+@objc public enum CheckmarkMode : Swift.Int {
+  case checkmark
+  case checkmarkWithText
+  case none
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum CheckmarkTextOptionForObjc : Swift.Int {
+  case approve
+  case success
+  case complete
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CheckmarkTextOption : Swift.String {
+  case approve
+  case success
+  case complete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension VisaSensoryBranding.CheckmarkMode : Swift.Equatable {}
+extension VisaSensoryBranding.CheckmarkMode : Swift.Hashable {}
+extension VisaSensoryBranding.CheckmarkMode : Swift.RawRepresentable {}
+extension VisaSensoryBranding.CheckmarkTextOptionForObjc : Swift.Equatable {}
+extension VisaSensoryBranding.CheckmarkTextOptionForObjc : Swift.Hashable {}
+extension VisaSensoryBranding.CheckmarkTextOptionForObjc : Swift.RawRepresentable {}
+extension VisaSensoryBranding.CheckmarkTextOption : Swift.Equatable {}
+extension VisaSensoryBranding.CheckmarkTextOption : Swift.Hashable {}
+extension VisaSensoryBranding.CheckmarkTextOption : Swift.RawRepresentable {}

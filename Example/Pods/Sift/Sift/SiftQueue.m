@@ -8,6 +8,7 @@
 #import "SiftEvent+Private.h"
 #import "SiftUtils.h"
 #import "Sift.h"
+#import "TaskManager.h"
 
 #import "SiftQueue.h"
 
@@ -20,6 +21,7 @@
     NSString *_archivePath;
     // Weak reference back to the parent.
     Sift * __weak _sift;
+    TaskManager *_taskManager;
 }
 
 - (instancetype)initWithIdentifier:(NSString *)identifier config:(SiftQueueConfig)config archivePath:(NSString *)archivePath sift:(Sift *)sift {
@@ -29,6 +31,7 @@
         _config = config;
         _archivePath = archivePath;
         _sift = sift;
+        _taskManager = [[TaskManager alloc] init];
 
         [self unarchive];
     }
@@ -58,13 +61,13 @@
         // before terminating your app and thus we have to persist data
         // aggressively when the app is in background.  Hopefully there
         // won't be too many events when app is in the background.
-        dispatch_async(dispatch_get_main_queue(), ^{
+        [_taskManager submitWithTask:^{
             if (UIApplication.sharedApplication.applicationState == UIApplicationStateBackground) {
-                dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^{
+                [self->_taskManager submitWithTask:^{
                     [self archive];
-                });
+                } queue:dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)];
             }
-        });
+        } queue:dispatch_get_main_queue()];
         
         if (self.readyForUpload) {
             [self requestUpload];
@@ -96,17 +99,10 @@ static NSString * const SF_LAST_UPLOAD_TIMESTAMP = @"lastUploadTimestamp";
             [archive setObject:_lastEvent forKey:SF_LAST_EVENT];
         }
         [archive setObject:@(_lastUploadTimestamp) forKey:SF_LAST_UPLOAD_TIMESTAMP];
-        #if TARGET_OS_MACCATALYST
-            NSData* data = [NSKeyedArchiver archivedDataWithRootObject: archive requiringSecureCoding:NO error:nil];
-            [data writeToFile:self->_archivePath options:NSDataWritingAtomic error:nil];
-        #else
-            if (@available(iOS 11.0, *)) {
-                NSData* data = [NSKeyedArchiver archivedDataWithRootObject: archive requiringSecureCoding:NO error:nil];
-                [data writeToFile:self->_archivePath options:NSDataWritingAtomic error:nil];
-            } else {
-                [NSKeyedArchiver archiveRootObject:archive toFile:self->_archivePath];
-            }
-        #endif
+       
+        NSData* data = [NSKeyedArchiver archivedDataWithRootObject: archive requiringSecureCoding:NO error:nil];
+        [data writeToFile:self->_archivePath options:NSDataWritingAtomic error:nil];
+
     }
 }
 
@@ -115,21 +111,12 @@ static NSString * const SF_LAST_UPLOAD_TIMESTAMP = @"lastUploadTimestamp";
         NSDictionary *archive;
         NSError *error;
         NSData *newData = [NSData dataWithContentsOfFile:_archivePath];
-        #if TARGET_OS_MACCATALYST
-            NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
-            unarchiver.requiresSecureCoding = NO;
-            archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
-            SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
-        #else
-            if (@available(iOS 11.0, *)) {
-                NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
-                unarchiver.requiresSecureCoding = NO;
-                archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
-                SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
-            } else {
-                archive = [NSKeyedUnarchiver unarchiveObjectWithFile:_archivePath];
-            }
-        #endif
+        
+        NSKeyedUnarchiver* unarchiver = [[NSKeyedUnarchiver alloc] initForReadingFromData:newData error:&error];
+        unarchiver.requiresSecureCoding = NO;
+        archive = [unarchiver decodeTopLevelObjectForKey:NSKeyedArchiveRootObjectKey error:&error];
+        SF_DEBUG(@"error unarchiving data: %@", error.localizedDescription);
+
         if (archive) {
             _queue = [NSMutableArray arrayWithArray:[archive objectForKey:SF_QUEUE]];
             _lastEvent = [archive objectForKey:SF_LAST_EVENT];
