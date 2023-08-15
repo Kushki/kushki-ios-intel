@@ -409,12 +409,14 @@
 				"${PODS_ROOT}/Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Sift/Sift.framework",
 				"${PODS_ROOT}/../../kushki-ios-intel/Frameworks/CardinalMobile.framework",
+				"${PODS_ROOT}/../../kushki-ios-intel/Frameworks/VisaSensoryBranding.framework",
 				"${BUILT_PRODUCTS_DIR}/kushki-ios-intel/kushki_ios_intel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardinalMobile.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisaSensoryBranding.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/kushki_ios_intel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
