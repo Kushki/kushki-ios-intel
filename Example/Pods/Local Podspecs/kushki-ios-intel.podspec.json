@@ -26,7 +26,10 @@
     ]
   },
   "ios": {
-    "vendored_frameworks": "kushki-ios-intel/Frameworks/CardinalMobile.framework"
+    "vendored_frameworks": [
+      "kushki-ios-intel/Frameworks/CardinalMobile.framework",
+      "kushki-ios-intel/Frameworks/VisaSensoryBranding.framework"
+    ]
   },
   "pod_target_xcconfig": {
     "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "arm64"
