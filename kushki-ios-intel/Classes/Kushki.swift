@@ -1,6 +1,7 @@
 import Foundation
 import Sift
 import SwiftUI
+import MastercardSonic
 
 public class Kushki {
     
@@ -131,6 +132,22 @@ public class Kushki {
         sensoryVisa.executeAnimationVisa(uiViewController: uiViewController){
             result, err in
             
+            DispatchQueue.main.async {
+                completion(result, err)
+            }
+        }
+   }
+    
+    
+    public func initMastercardBrandingAnimation(uiViewController: UIViewController, completion: @escaping (Bool, Error?) -> Void) {
+
+      let frameworkBundleID  = "org.cocoapods.Kushki";
+      let bundle = Bundle(identifier: frameworkBundleID)
+      let sensoryMastercard = SensoryBrandingMastercardController(nibName: "SensoryBrandingMastercardController", bundle: bundle)
+        
+        sensoryMastercard.executeAnimationMastercard(uiViewController: uiViewController){
+            result, err in
+
             DispatchQueue.main.async {
                 completion(result, err)
             }

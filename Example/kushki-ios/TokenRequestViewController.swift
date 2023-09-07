@@ -9,6 +9,7 @@
 import UIKit
 import Kushki
 import WebKit
+
 class TokenRequestViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var ResponseView: UITextView!
     @IBOutlet weak var RequestToken: UIButton!

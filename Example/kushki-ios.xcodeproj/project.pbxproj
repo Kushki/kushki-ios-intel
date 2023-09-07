@@ -12,14 +12,18 @@
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		746725F12A94128F000C26FE /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A59A6E2A43B6D80045E0AC /* VisaSensoryBranding.xcframework */; };
+		746725F22A94128F000C26FE /* VisaSensoryBranding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3A59A6E2A43B6D80045E0AC /* VisaSensoryBranding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7467260F2A954564000C26FE /* SensoryBrandingMCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7467260E2A954564000C26FE /* SensoryBrandingMCController.swift */; };
+		746726222A96C8D4000C26FE /* MastercardSonic.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746726212A96C8D3000C26FE /* MastercardSonic.xcframework */; };
+		746726232A96C8D4000C26FE /* MastercardSonic.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 746726212A96C8D3000C26FE /* MastercardSonic.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF30347D1DAC231B005C9F39 /* KushkiIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF052B751DAC00D400C1AB98 /* KushkiIntegrationTests.swift */; };
 		AF30347E1DAC231B005C9F39 /* KushkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF052B761DAC00D400C1AB98 /* KushkiTests.swift */; };
 		AF30347F1DAC231B005C9F39 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF052B731DAC00C800C1AB98 /* Helpers.swift */; };
 		AF3034851DAC2D62005C9F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF3034831DAC2D62005C9F39 /* LaunchScreen.storyboard */; };
-		AFF155E41DAC3B1100BC21EA /* Kushki in Resources */ = {isa = PBXBuildFile; fileRef = AFF155E31DAC3B1100BC21EA /* Kushki */; };
+		AFF155E41DAC3B1100BC21EA /* kushki-ios-intel in Resources */ = {isa = PBXBuildFile; fileRef = AFF155E31DAC3B1100BC21EA /* kushki-ios-intel */; };
 		AFF155E61DAC3B5000BC21EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF155E51DAC3B5000BC21EA /* ViewController.swift */; };
 		C3A59A6D2A438F7E0045E0AC /* SensoryBrandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A59A6C2A438F7E0045E0AC /* SensoryBrandingController.swift */; };
-		C3A59A6F2A43B6D80045E0AC /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A59A6E2A43B6D80045E0AC /* VisaSensoryBranding.xcframework */; };
 		E2EAB27926C2C3FC00FCEDF1 /* CardTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EAB27826C2C3FC00FCEDF1 /* CardTokenView.swift */; };
 		E2EAB27A26C2C3FC00FCEDF1 /* CardTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EAB27826C2C3FC00FCEDF1 /* CardTokenView.swift */; };
 		E4035B342328698900A2A5EC /* TokenRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4035B332328698900A2A5EC /* TokenRequestViewController.swift */; };
@@ -52,7 +56,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				746726232A96C8D4000C26FE /* MastercardSonic.xcframework in Embed Frameworks */,
 				EFCDE42327C074FB0054C25C /* Pods_kushki_ios_Example.framework in Embed Frameworks */,
+				746725F22A94128F000C26FE /* VisaSensoryBranding.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +66,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0CE9734B89FC1D9E54015281 /* Pods-kushki-ios_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kushki-ios_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kushki-ios_Tests/Pods-kushki-ios_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		21EDE058D85655FB8F5D8F7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2633DEB327DBCE77C71823A3 /* Pods-kushki-ios_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kushki-ios_Example.debug.xcconfig"; path = "Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		51C40AA32435284E00D8239F /* SubscriptionCardAsyncController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCardAsyncController.swift; sourceTree = "<group>"; };
@@ -73,6 +78,9 @@
 		607FACE51AFB9204008FA782 /* kushki-ios_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kushki-ios_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6682DB8730FDC44D317526EC /* Pods-kushki-ios_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kushki-ios_Tests.debug.xcconfig"; path = "Target Support Files/Pods-kushki-ios_Tests/Pods-kushki-ios_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		746726042A951965000C26FE /* MastercardSonic.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MastercardSonic.xcframework; path = "../../../../Downloads/MastercardSonic-XCFramework-1.4.0/MastercardSonic.xcframework"; sourceTree = "<group>"; };
+		7467260E2A954564000C26FE /* SensoryBrandingMCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoryBrandingMCController.swift; sourceTree = "<group>"; };
+		746726212A96C8D3000C26FE /* MastercardSonic.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MastercardSonic.xcframework; sourceTree = "<group>"; };
 		8A8AE25C19677E8DEA6C8C7F /* Pods_kushki_ios_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kushki_ios_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFA99897193F3500082CDA0 /* Pods-kushki-ios_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kushki-ios_Example.release.xcconfig"; path = "Target Support Files/Pods-kushki-ios_Example/Pods-kushki-ios_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9E3F34E12B0EAC252DC33658 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -81,10 +89,10 @@
 		AF052B761DAC00D400C1AB98 /* KushkiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KushkiTests.swift; sourceTree = "<group>"; };
 		AF3034841DAC2D62005C9F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "kushki-ios/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		AF3034861DAC3030005C9F39 /* kushki-ios_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "kushki-ios_Example.entitlements"; sourceTree = "<group>"; };
-		AFF155E31DAC3B1100BC21EA /* Kushki */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Kushki; path = ../Kushki; sourceTree = "<group>"; };
+		AFF155E31DAC3B1100BC21EA /* kushki-ios-intel */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "kushki-ios-intel"; path = "../kushki-ios-intel"; sourceTree = "<group>"; };
 		AFF155E51DAC3B5000BC21EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B24457BB0F3C421531BBFD93 /* Pods_kushki_ios_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kushki_ios_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB96243B3B32048EBA3B208C /* Kushki.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Kushki.podspec; path = ../Kushki.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB96243B3B32048EBA3B208C /* kushki-ios-intel.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "kushki-ios-intel.podspec"; path = "../kushki-ios-intel.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C3A59A6C2A438F7E0045E0AC /* SensoryBrandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoryBrandingController.swift; sourceTree = "<group>"; };
 		C3A59A6E2A43B6D80045E0AC /* VisaSensoryBranding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = VisaSensoryBranding.xcframework; sourceTree = "<group>"; };
 		CF60D57898B6A7C968498700 /* Pods-kushki-ios_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kushki-ios_Tests.release.xcconfig"; path = "Target Support Files/Pods-kushki-ios_Tests/Pods-kushki-ios_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,8 +113,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746726222A96C8D4000C26FE /* MastercardSonic.xcframework in Frameworks */,
 				EFCDE42227C074FB0054C25C /* Pods_kushki_ios_Example.framework in Frameworks */,
-				C3A59A6F2A43B6D80045E0AC /* VisaSensoryBranding.xcframework in Frameworks */,
+				746725F12A94128F000C26FE /* VisaSensoryBranding.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +137,6 @@
 				9BFA99897193F3500082CDA0 /* Pods-kushki-ios_Example.release.xcconfig */,
 				6682DB8730FDC44D317526EC /* Pods-kushki-ios_Tests.debug.xcconfig */,
 				CF60D57898B6A7C968498700 /* Pods-kushki-ios_Tests.release.xcconfig */,
-				0CE9734B89FC1D9E54015281 /* Pods-kushki-ios_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -137,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				C3A59A6E2A43B6D80045E0AC /* VisaSensoryBranding.xcframework */,
-				AFF155E31DAC3B1100BC21EA /* Kushki */,
+				AFF155E31DAC3B1100BC21EA /* kushki-ios-intel */,
 				AF3034861DAC3030005C9F39 /* kushki-ios_Example.entitlements */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for kushki-ios */,
@@ -204,7 +212,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				BB96243B3B32048EBA3B208C /* Kushki.podspec */,
+				BB96243B3B32048EBA3B208C /* kushki-ios-intel.podspec */,
 				21EDE058D85655FB8F5D8F7F /* README.md */,
 				9E3F34E12B0EAC252DC33658 /* LICENSE */,
 			);
@@ -214,6 +222,8 @@
 		8A266CC47637ABB74512AED3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				746726042A951965000C26FE /* MastercardSonic.xcframework */,
+				746726212A96C8D3000C26FE /* MastercardSonic.xcframework */,
 				B24457BB0F3C421531BBFD93 /* Pods_kushki_ios_Example.framework */,
 				8A8AE25C19677E8DEA6C8C7F /* Pods_kushki_ios_Tests.framework */,
 			);
@@ -242,6 +252,7 @@
 				E4AF00DC234D2BDD002C3B75 /* GetCardInfoViewController.swift */,
 				51C40AA32435284E00D8239F /* SubscriptionCardAsyncController.swift */,
 				C3A59A6C2A438F7E0045E0AC /* SensoryBrandingController.swift */,
+				7467260E2A954564000C26FE /* SensoryBrandingMCController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -344,7 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3034851DAC2D62005C9F39 /* LaunchScreen.storyboard in Resources */,
-				AFF155E41DAC3B1100BC21EA /* Kushki in Resources */,
+				AFF155E41DAC3B1100BC21EA /* kushki-ios-intel in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -467,6 +478,7 @@
 				E40BC5E3232952E20056B58C /* TransferTokenViewController.swift in Sources */,
 				E40BC5E5232973AE0056B58C /* TransferSubscriptionViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				7467260F2A954564000C26FE /* SensoryBrandingMCController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

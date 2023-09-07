@@ -289,7 +289,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-7w-wOf">
-                                <rect key="frame" x="17" y="156" width="372" height="52"/>
+                                <rect key="frame" x="16" y="150" width="372" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -299,7 +299,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXl-1z-x7Z">
-                                <rect key="frame" x="16" y="216" width="372" height="52"/>
+                                <rect key="frame" x="16" y="198" width="372" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Transfer Token"/>
@@ -317,7 +317,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0a-gA-m4F">
-                                <rect key="frame" x="22" y="276" width="372" height="53"/>
+                                <rect key="frame" x="16" y="256" width="372" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Transfer Subscription Token"/>
@@ -326,7 +326,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZZ-Ae-vCb">
-                                <rect key="frame" x="20" y="337" width="372" height="52"/>
+                                <rect key="frame" x="17" y="316" width="372" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Questions Secure Validation Subs. transfer"/>
@@ -335,7 +335,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7z-I6-ABf">
-                                <rect key="frame" x="16" y="397" width="372" height="52"/>
+                                <rect key="frame" x="16" y="379" width="372" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Send Answera Secure Validation Subs. Transfer"/>
@@ -344,7 +344,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3M-pV-vXn">
-                                <rect key="frame" x="16" y="457" width="372" height="37"/>
+                                <rect key="frame" x="16" y="442" width="372" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Request Cash Token"/>
@@ -353,7 +353,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFe-02-Da7">
-                                <rect key="frame" x="16" y="502" width="372" height="38"/>
+                                <rect key="frame" x="16" y="487" width="372" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Request Card Async Token"/>
@@ -362,7 +362,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5r-5r-vxB">
-                                <rect key="frame" x="17" y="548" width="374" height="52"/>
+                                <rect key="frame" x="17" y="534" width="374" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Get Card Info"/>
@@ -371,7 +371,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS5-Bh-DD4">
-                                <rect key="frame" x="14" y="608" width="374" height="52"/>
+                                <rect key="frame" x="14" y="583" width="374" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Get Subs Card Async Token"/>
@@ -380,7 +380,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AND-qy-6G0">
-                                <rect key="frame" x="14" y="668" width="374" height="36"/>
+                                <rect key="frame" x="14" y="630" width="374" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <state key="normal" title="Demo Secure Validate Card"/>
@@ -389,7 +389,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sr-od-1EU">
-                                <rect key="frame" x="14" y="712" width="374" height="38"/>
+                                <rect key="frame" x="14" y="675" width="374" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo updatedCurrencies"/>
@@ -398,7 +398,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="YCr-08-dhk">
-                                <rect key="frame" x="14" y="758" width="374" height="44"/>
+                                <rect key="frame" x="14" y="722" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo Request Subscription Token"/>
@@ -407,12 +407,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="B4T-Sf-3re">
-                                <rect key="frame" x="14" y="810" width="374" height="44"/>
+                                <rect key="frame" x="16" y="771" width="374" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Demo show animation visa"/>
                                 <connections>
                                     <segue destination="sWl-xU-Yzs" kind="show" id="iV4-ME-iO5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="eOM-3G-wIp">
+                                <rect key="frame" x="16" y="811" width="374" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Demo show animation Mastercard"/>
+                                <connections>
+                                    <segue destination="pZc-Hf-DZ1" kind="show" id="62R-k3-JPs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1384,11 +1393,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSV-Vs-Mr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1375" y="1288"/>
+            <point key="canvasLocation" x="-1375" y="1294"/>
+        </scene>
+        <!--Show animation MC-->
+        <scene sceneID="tUR-4P-KaC">
+            <objects>
+                <viewController title="Show animation MC" id="pZc-Hf-DZ1" customClass="SensoryBrandingMCController" customModule="kushki_ios_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cWZ-qB-MDV"/>
+                        <viewControllerLayoutGuide type="bottom" id="4b8-yx-dXt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2RP-ge-Gyu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pSb-zU-h46">
+                                <rect key="frame" x="0.0" y="52" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Show animation Mastercard" id="8aT-Cl-EnK">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="vbO-i8-aPY">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="PgJ-Mb-1ob">
+                                                <rect key="frame" x="20" y="13" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back"/>
+                                            </button>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="JjA-bE-TY7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cl2-nZ-qbh">
+                                <rect key="frame" x="20" y="384" width="374" height="449"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzi-4t-Km5">
+                                <rect key="frame" x="103" y="159" width="209" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Show Animation Mastercard"/>
+                                <connections>
+                                    <action selector="handleTouchUpInside:" destination="pZc-Hf-DZ1" eventType="touchUpInside" id="HeK-jI-3RZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XH6-y9-oRG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGX-w4-0kj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="1294"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7Qg-Tx-lrl"/>
+        <segue reference="JjA-bE-TY7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="groupTableViewBackgroundColor">

@@ -1,0 +1,123 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MastercardSonic
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import Foundation
+@_exported import MastercardSonic
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc public enum MCSonicStatus : Swift.Int, Swift.Error {
+  case success = 800
+  case errorWhilePreparing = 901
+  case errorWhilePreparingSound = 902
+  case errorWhilePreparingAnimation = 903
+  case errorAlreadyPlaying = 904
+  case errorWhilePlaying = 905
+  case errorWhilePlayingSound = 906
+  case errorWhilePlayingAnimation = 907
+  case errorNotPrepared = 908
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public static var _nsErrorDomain: Swift.String {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum MCSonicType : Swift.Int {
+  case soundAndAnimation
+  case soundOnly
+  case animationOnly
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum MCSonicEnvironment : Swift.Int {
+  case sandbox
+  case production
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc final public class MCSonicController : ObjectiveC.NSObject {
+  @objc final public var preparedSonicCue: Swift.String? {
+    get
+  }
+  @objc final public var isPlaying: Swift.Bool {
+    get
+  }
+  @objc final public func prepare(with sonicType: MastercardSonic.MCSonicType = .soundAndAnimation, sonicCue: Swift.String, sonicEnvironment: MastercardSonic.MCSonicEnvironment, merchant: MastercardSonic.MCSonicMerchant, completion: ((MastercardSonic.MCSonicStatus) -> Swift.Void)?)
+  @objc final public func play(with sonicView: MastercardSonic.MCSonicView?, completion: ((MastercardSonic.MCSonicStatus) -> Swift.Void)?)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public class MCSonicMerchant : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init?(merchantName: Swift.String, countryCode: Swift.String, city: Swift.String?, merchantCategoryCodes: [Swift.String], merchantId: Swift.String?)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension MastercardSonic.MCSonicMerchant {
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public var hash: Swift.Int {
+    @objc get
+  }
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+}
+@available(iOS 13.0, *)
+public struct MCSonicSwiftUIView : SwiftUI.UIViewRepresentable {
+  public var view: MastercardSonic.MCSonicView
+  @_Concurrency.MainActor(unsafe) public func makeUIView(context: MastercardSonic.MCSonicSwiftUIView.Context) -> MastercardSonic.MCSonicView
+  @_Concurrency.MainActor(unsafe) public func updateUIView(_ uiView: MastercardSonic.MCSonicView, context: MastercardSonic.MCSonicSwiftUIView.Context)
+  public init(view: MastercardSonic.MCSonicView, background: MastercardSonic.MCSonicBackground)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewType = MastercardSonic.MCSonicView
+}
+extension Foundation.Scanner {
+  public func getScannedDouble(_ result: Swift.UnsafeMutablePointer<Swift.Double>?) -> Swift.Bool
+  public func getScannedString(_ string: Swift.String, into result: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+  public func getScannedCharacters(from set: Foundation.CharacterSet, into result: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+}
+@objc public enum MCSonicBackground : Swift.Int {
+  case black
+  case white
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) final public class MCSonicView : UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) final public var background: MastercardSonic.MCSonicBackground {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc override final public func layoutSubviews()
+  @objc deinit
+}
+extension MastercardSonic.MCSonicStatus : Swift.Equatable {}
+extension MastercardSonic.MCSonicStatus : Swift.Hashable {}
+extension MastercardSonic.MCSonicStatus : Swift.RawRepresentable {}
+extension MastercardSonic.MCSonicType : Swift.Equatable {}
+extension MastercardSonic.MCSonicType : Swift.Hashable {}
+extension MastercardSonic.MCSonicType : Swift.RawRepresentable {}
+extension MastercardSonic.MCSonicEnvironment : Swift.Equatable {}
+extension MastercardSonic.MCSonicEnvironment : Swift.Hashable {}
+extension MastercardSonic.MCSonicEnvironment : Swift.RawRepresentable {}
+extension MastercardSonic.MCSonicBackground : Swift.Equatable {}
+extension MastercardSonic.MCSonicBackground : Swift.Hashable {}
+extension MastercardSonic.MCSonicBackground : Swift.RawRepresentable {}

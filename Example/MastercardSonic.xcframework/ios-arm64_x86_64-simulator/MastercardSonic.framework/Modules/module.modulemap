@@ -1,0 +1,11 @@
+framework module MastercardSonic {
+  umbrella header "MastercardSonic.h"
+
+  export *
+  module * { export * }
+}
+
+module MastercardSonic.Swift {
+  header "MastercardSonic-Swift.h"
+  requires objc
+}
